@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolbox>
+	<!-- application start -->
+	<tool>
+		<key>shiro</key>
+		<scope>application</scope>
+		<class>com.buession.velocity.shiro.tools.ShiroTool</class>
+	</tool>
+	<!-- application end -->
+</toolbox>
