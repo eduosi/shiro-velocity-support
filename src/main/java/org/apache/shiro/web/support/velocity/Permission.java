@@ -5,9 +5,6 @@ import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 import org.apache.velocity.tools.Scope;
@@ -17,36 +14,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @DefaultKey("shiro")
-@ValidScope(Scope.REQUEST)
+@ValidScope(Scope.APPLICATION)
 public class Permission {
 
 	private static final String ROLE_NAMES_DELIMETER = ",";
 	private static final String PERMISSION_NAMES_DELIMETER = ",";
 
 	private static final Logger logger = LoggerFactory.getLogger(Permission.class);
-
-	protected HttpServletRequest request;
-	protected HttpServletResponse response;
-
-	public HttpServletRequest getRequest() {
-		return request;
-	}
-
-	public void setRequest(HttpServletRequest request) {
-		if (request == null) {
-			throw new NullPointerException("request should not be null");
-		}
-
-		this.request = request;
-	}
-
-	public HttpServletResponse getResponse() {
-		return response;
-	}
-
-	public void setResponse(HttpServletResponse response) {
-		this.response = response;
-	}
 
 	/* 验证是否为已认证通过的用户，不包含已记住的用户，这是与 isUser 标签方法的区别所在。 */
 	public boolean isAuthenticated() {

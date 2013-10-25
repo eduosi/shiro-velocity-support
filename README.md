@@ -1,4 +1,4 @@
-velocity-shiro
+shiro-velocity-support
 ==============
 
 在 velocity 模板文件中，实现 shiro 权限验证

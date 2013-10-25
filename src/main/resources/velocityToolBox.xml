@@ -2,9 +2,9 @@
 <toolbox>
 	<!-- application start -->
 	<tool>
-		<key>shiro</key>
+		<!-- key>shiro</key --><!-- 可选默认为 shiro -->
 		<scope>application</scope>
-		<class>com.buession.velocity.shiro.tools.ShiroTool</class>
+		<class>org.apache.shiro.web.support.velocity。Permission</class>
 	</tool>
 	<!-- application end -->
 </toolbox>
