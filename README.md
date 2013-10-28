@@ -58,9 +58,9 @@ velocityToolBox.xml 文件中也只列出了，该功能的配置。
 		参数：String roleNames 用户角色列表，以 “," 分割
 		返回值：Boolean
 
-	十一、$shiro.hasAnyRoles(List<String> roleNames)
+	十一、$shiro.hasAnyRoles(Collection<String> roleNames)
 		功能说明：验证当前用户是否属于以下任意一个角色。
-		参数：List<String> roleNames 用户权限角色
+		参数：Collection<String> roleNames 用户权限角色
 		返回值：Boolean
 
 	十二、$shiro.hasAnyRoles(String[] roleNames)
@@ -89,9 +89,9 @@ velocityToolBox.xml 文件中也只列出了，该功能的配置。
 		参数：String permissions 权限名称列表，以 “," 分割
 		返回值：Boolean
 
-	十七、$shiro.hasAnyPermissions(List<String> permissions)
+	十七、$shiro.hasAnyPermissions(Collection<String> permissions)
 		功能说明：验证当前用户是否拥有以下任意一个权限。
-		参数：List<String> 权限名称列表
+		参数：Collection<String> 权限名称列表
 		返回值：Boolean
 
 	十八、$shiro.hasAnyPermissions(String[] permissions)

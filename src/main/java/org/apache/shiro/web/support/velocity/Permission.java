@@ -34,6 +34,7 @@ import java.beans.BeanInfo;
 import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
 import java.util.List;
+import java.util.Collection;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
@@ -157,12 +158,11 @@ public class Permission {
 	}
 
 	/* 验证当前用户是否属于以下任意一个角色。 */
-	public boolean hasAnyRoles(List<String> roleNames) {
+	public boolean hasAnyRoles(Collection<String> roleNames) {
 		Subject subject = SecurityUtils.getSubject();
 
 		if (subject != null && roleNames != null) {
-			for (int i = 0; i < roleNames.size(); i++) {
-				String role = roleNames.get(i);
+			for (String role : roleNames) {
 				if (role != null && subject.hasRole(role.trim())) {
 					return true;
 				}
@@ -223,12 +223,11 @@ public class Permission {
 	}
 
 	/* 验证当前用户是否拥有以下任意一个权限。 */
-	public boolean hasAnyPermissions(List<String> permissions) {
+	public boolean hasAnyPermissions(Collection<String> permissions) {
 		Subject subject = SecurityUtils.getSubject();
 
 		if (subject != null && permissions != null) {
-			for (int i = 0; i < permissions.size(); i++) {
-				String permission = permissions.get(i);
+			for (String permission : permissions) {
 				if (permission != null && subject.isPermitted(permission.trim())) {
 					return true;
 				}
