@@ -12,6 +12,11 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ * 
+ * +--------------------------------------------------------------------------------+
+ * | License: https://raw.github.com/eduosi/shiro-velocity-support/master/LICENSE	|
+ * | Author: Yong.Teng	<webmaster@buession.com>                         			|
+ * +--------------------------------------------------------------------------------+
  */
 
 package org.apache.shiro.web.support.velocity;
