@@ -13,7 +13,7 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd 
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
 		
-		<bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+	<bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
         <!-- 设置为true以忽略对Accept Header的支持 -->
         <property name="ignoreAcceptHeader" value="true" />
         <property name="defaultContentType" value="text/html; charset=UTF-8" />
