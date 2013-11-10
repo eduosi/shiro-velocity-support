@@ -4,6 +4,6 @@
 *.jar
 *.war
 *.ear
-.svn/
+.git/
 .settings/
 target/
