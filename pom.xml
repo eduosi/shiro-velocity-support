@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
 	<name>shiro-velocity-support</name>
+	<modelVersion>4.0.0</modelVersion>
   	<groupId>org.apache.shiro.web</groupId>
   	<artifactId>velocity-support</artifactId>
   	<url>http://maven.apache.org</url>
@@ -11,7 +11,7 @@
 
   	<organization>
   		<name>Buession.com Inc.</name>
-  		<url>www.buession.com</url>
+  		<url>http://www.buession.com/</url>
   	</organization>
 
   	<properties>
