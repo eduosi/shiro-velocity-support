@@ -50,4 +50,16 @@
       		<scope>test</scope>
     	</dependency>
   	</dependencies>
+
+    <build>
+		<finalName>velocity-support</finalName>
+		<defaultGoal>compile</defaultGoal>
+        <plugins>
+            <plugin>
+	           <groupId>org.apache.maven.plugins</groupId>
+	           <artifactId>maven-jar-plugin</artifactId>
+	           <version>2.4</version>
+            </plugin>
+        </plugins>
+	</build>
 </project>
