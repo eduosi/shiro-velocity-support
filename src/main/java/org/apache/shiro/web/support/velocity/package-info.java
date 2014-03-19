@@ -19,16 +19,9 @@
  * <http://www.apache.org/>.
  * 
  * +------------------------------------------------------------------------------------------------+
- * | License: License: https://mcrypt.buession.com.cn/LICENSE 										|
+ * | License: http://shiro-velocity-support.buession.com.cn/LICENSE 								|
  * | Author: Yong.Teng <webmaster@buession.com> 													|
  * | Copyright @ 2013-2014 Buession.com Inc.														|
  * +------------------------------------------------------------------------------------------------+
  */
-
-/**
- *
- * Annotation support for Shiro Velocity Support pointcuts.
- *
- */
-
 package org.apache.shiro.web.support.velocity;
