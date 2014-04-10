@@ -100,11 +100,7 @@ public class Permission {
 	 */
 	public Object getPrincipal() {
 		Subject subject = SecurityUtils.getSubject();
-		if (subject != null) {
-			return subject.getPrincipal();
-		}
-
-		return null;
+		return subject != null ? subject.getPrincipal() : null;
 	}
 
 	/**
@@ -116,7 +112,6 @@ public class Permission {
 	 */
 	public Object getPrincipalProperty(String property) {
 		Subject subject = SecurityUtils.getSubject();
-		Object value = null;
 
 		if (subject != null) {
 			Object principal = subject.getPrincipal();
@@ -124,26 +119,21 @@ public class Permission {
 			try {
 				BeanInfo bi = Introspector.getBeanInfo(principal.getClass());
 
-				boolean foundProperty = false;
 				for (PropertyDescriptor pd : bi.getPropertyDescriptors()) {
-					if (pd.getName().equals(property)) {
-						value = pd.getReadMethod().invoke(principal, (Object[]) null);
-						foundProperty = true;
-						break;
+					if (pd.getName().equals(property) == true) {
+						return pd.getReadMethod().invoke(principal, (Object[]) null);
 					}
 				}
 
-				if (!foundProperty) {
-					logger.trace("Property [{}] not found in principal of type [{}]", property,
-							principal.getClass().getName());
-				}
+				logger.trace("Property [{}] not found in principal of type [{}]", property,
+						principal.getClass().getName());
 			} catch (Exception e) {
 				logger.trace("Error reading property [{}] from principal of type [{}]", property,
 						principal.getClass().getName());
 			}
 		}
 
-		return value;
+		return null;
 	}
 
 	/**
@@ -218,7 +208,7 @@ public class Permission {
 
 		if (subject != null && roleNames != null) {
 			for (String role : roleNames) {
-				if (role != null && subject.hasRole(role.trim())) {
+				if (role != null && subject.hasRole(role.trim()) == true) {
 					return true;
 				}
 			}
@@ -240,7 +230,7 @@ public class Permission {
 		if (subject != null && roleNames != null) {
 			for (int i = 0; i < roleNames.length; i++) {
 				String role = roleNames[i];
-				if (role != null && subject.hasRole(role.trim())) {
+				if (role != null && subject.hasRole(role.trim()) == true) {
 					return true;
 				}
 			}
@@ -283,6 +273,7 @@ public class Permission {
 	 */
 	public boolean hasAnyPermissions(String permissions, String delimeter) {
 		Subject subject = SecurityUtils.getSubject();
+
 		if (subject != null) {
 			if (delimeter == null || delimeter.length() == 0) {
 				delimeter = PERMISSION_NAMES_DELIMETER;
@@ -321,7 +312,7 @@ public class Permission {
 
 		if (subject != null && permissions != null) {
 			for (String permission : permissions) {
-				if (permission != null && subject.isPermitted(permission.trim())) {
+				if (permission != null && subject.isPermitted(permission.trim()) == true) {
 					return true;
 				}
 			}
@@ -343,7 +334,7 @@ public class Permission {
 		if (subject != null && permissions != null) {
 			for (int i = 0; i < permissions.length; i++) {
 				String permission = permissions[i];
-				if (permission != null && subject.isPermitted(permission.trim())) {
+				if (permission != null && subject.isPermitted(permission.trim()) == true) {
 					return true;
 				}
 			}

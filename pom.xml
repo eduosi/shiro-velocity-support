@@ -6,7 +6,7 @@
   	<artifactId>velocity-support</artifactId>
   	<url>http://maven.apache.org</url>
   	<description>shiro permission velocity support</description>
-  	<version>0.0.4</version>
+  	<version>0.0.5</version>
   	<packaging>jar</packaging>
 
   	<organization>
@@ -53,7 +53,6 @@
 
     <build>
 		<finalName>velocity-support</finalName>
-		<defaultGoal>compile</defaultGoal>
         <plugins>
             <plugin>
 	           <groupId>org.apache.maven.plugins</groupId>
@@ -72,10 +71,8 @@
           		</execution>
         		</executions>
             	<configuration>
-            		<show>private</show>
             		<charset>UTF-8</charset>
             		<encoding>UTF-8</encoding>
-            		<docencoding>UTF-8</docencoding>
             	</configuration>
             </plugin>
             <plugin>
