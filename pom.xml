@@ -6,7 +6,7 @@
   	<artifactId>velocity-support</artifactId>
   	<url>http://maven.apache.org</url>
   	<description>shiro permission velocity support</description>
-  	<version>0.0.5</version>
+  	<version>0.0.6</version>
   	<packaging>jar</packaging>
 
   	<organization>
@@ -24,23 +24,27 @@
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>3.0.1</version>
+            <scope>compile</scope>
         </dependency>
         
         <dependency>
   			<groupId>velocity</groupId>
   			<artifactId>velocity</artifactId>
   			<version>1.5</version>
+  			<scope>compile</scope>
 		</dependency>
 		<dependency>
   			<groupId>velocity-tools</groupId>
   			<artifactId>velocity-tools</artifactId>
   			<version>2.0-beta1</version>
+  			<scope>compile</scope>
 		</dependency>
 		
 		<dependency>
   			<groupId>org.apache.shiro</groupId>
   			<artifactId>shiro-core</artifactId>
   			<version>${shiro.version}</version>
+  			<scope>compile</scope>
 		</dependency>
 
     	<dependency>
